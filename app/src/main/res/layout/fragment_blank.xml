@@ -35,5 +35,13 @@
         android:text="@string/text_default"
         android:textColor="@color/watcher" />
 
+    <Button
+        android:id="@+id/show_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@string/show_toast"/>
+
 
 </LinearLayout>
