@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
-    android:layout_height="150dp">
+    android:layout_height="@dimen/activity_margin_top_50">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/screen"
-        android:padding="16dp">
+        android:padding="@dimen/padding">
 
         <ImageView
             android:id="@+id/image"
@@ -16,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="16dp" />
+            android:layout_marginEnd="@dimen/padding" />
 
         <TextView
             android:id="@+id/name"
@@ -25,7 +26,7 @@
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/image"
             android:textColor="@color/watcher"
-            android:textSize="30sp" />
+            android:textSize="@dimen/text_size_30" />
 
     </RelativeLayout>
 

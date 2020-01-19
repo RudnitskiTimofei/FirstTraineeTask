@@ -10,27 +10,27 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
+        android:paddingBottom="@dimen/activity_margin_top_10"
         android:layout_gravity="center_horizontal"
-        android:textColor="#030202"
+        android:textColor="@color/black"
         android:text="@string/enter"
-        android:textSize="24sp" />
+        android:textSize="@dimen/text_size_30" />
 
     <EditText
         android:id="@+id/someText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/activity_margin_top_20"
         android:hint="@string/hint"
-        android:padding="10dp" />
+        android:padding="@dimen/activity_margin_top_10" />
 
     <TextView
         android:id="@+id/watch_someText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/textWatcher"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/activity_margin_top_20"
         android:layout_gravity="center_horizontal"
         android:text="@string/text_default"
         android:textColor="@color/watcher" />
@@ -40,8 +40,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/activity_margin_top_20"
         android:text="@string/show_toast"/>
-
-
 </LinearLayout>

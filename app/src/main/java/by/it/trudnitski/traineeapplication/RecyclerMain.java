@@ -19,13 +19,13 @@ public class RecyclerMain extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler_main);
-        intializeData();
-        LinearLayoutManager manager = new LinearLayoutManager(this);
-        recyclerView = (RecyclerView) findViewById(R.id.list);
-        recyclerView.setLayoutManager(manager);
+        recyclerView = findViewById(R.id.list);
         adapter = new DataAdapter(phones);
-        recyclerView.setAdapter(adapter);
+        LinearLayoutManager manager = new LinearLayoutManager(this);
 
+        intializeData();
+        recyclerView.setLayoutManager(manager);
+        recyclerView.setAdapter(adapter);
     }
 
     private void intializeData() {
@@ -42,6 +42,4 @@ public class RecyclerMain extends AppCompatActivity {
         phones.add(new Phone("Motorola MPX200", R.drawable.mpx200_front_open));
         phones.add(new Phone("BlackBerry Bold", R.drawable.blackberry));
     }
-
-
 }

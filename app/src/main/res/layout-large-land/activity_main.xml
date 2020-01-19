@@ -23,8 +23,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:textSize="50sp"
+            android:layout_marginTop="@dimen/activity_margin_top"
+            android:textSize="@dimen/text_size"
             android:text="@string/hello"
             android:textColor="@color/colorAccent" />
 
@@ -33,17 +33,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textSize="50sp"
-            android:layout_marginTop="10dp"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/activity_margin_top"
             android:text="@string/andersen"
-            android:textColor="#090808" />
+            android:textColor="@color/black" />
 
 
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/activity_margin_top"
             android:layout_gravity="center_horizontal"
             android:text="@string/button1" />
 

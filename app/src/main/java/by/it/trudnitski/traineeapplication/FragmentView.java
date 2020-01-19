@@ -10,19 +10,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class FragmentView extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_view);
 
-        final EditText editText = (EditText) findViewById(R.id.someText);
+        final EditText editText = findViewById(R.id.someText);
+        Button buttonShowToast = findViewById(R.id.show_toast);
 
-        Button buttonShowToast = (Button) findViewById(R.id.show_toast);
         buttonShowToast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(FragmentView.this, editText.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(FragmentView.this, editText.getText(),
+                        Toast.LENGTH_SHORT).show();
             }
         });
 

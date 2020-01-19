@@ -26,19 +26,18 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        Button button = findViewById(R.id.button1);
+        Button button1 = findViewById(R.id.button3);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer,
                 R.string.nav_open, R.string.nav_close);
+
+        setSupportActionBar(toolbar);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        Button button = (Button) findViewById(R.id.button1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,8 +45,6 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-
-        Button button1 = (Button) findViewById(R.id.button3);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +52,6 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-
     }
 
     @Override
@@ -85,8 +81,9 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         int id = menuItem.getItemId();
+
         switch (id) {
             case R.id.nav_gallery:
                 Toast.makeText(this, "You choose Galery on navi panel", Toast.LENGTH_SHORT).show();
@@ -96,15 +93,14 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_trash:
                 Toast.makeText(this, "You choose Trash on navi pamel", Toast.LENGTH_SHORT).show();
         }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

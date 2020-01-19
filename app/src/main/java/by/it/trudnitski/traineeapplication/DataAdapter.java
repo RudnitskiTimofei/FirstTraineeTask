@@ -27,7 +27,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_item, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.list_item, viewGroup, false);
         ViewHolder viewholder = new ViewHolder(view);
         return viewholder;
     }
@@ -75,9 +76,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
         public ViewHolder(View view) {
             super(view);
-            cardView = (CardView) view.findViewById(R.id.card_view);
-            imageView = (ImageView) view.findViewById(R.id.image);
-            nameView = (TextView) view.findViewById(R.id.name);
+            cardView = view.findViewById(R.id.card_view);
+            imageView = view.findViewById(R.id.image);
+            nameView = view.findViewById(R.id.name);
         }
     }
 

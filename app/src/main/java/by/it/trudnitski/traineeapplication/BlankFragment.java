@@ -17,46 +17,39 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class BlankFragment extends Fragment {
-
     private TextView textView;
     private EditText editText;
-
-    public BlankFragment() {
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View v = inflater.inflate(R.layout.fragment_blank, null);
-        editText = (EditText) v.findViewById(R.id.someText);
-        textView = (TextView) v.findViewById(R.id.watch_someText);
+        editText = v.findViewById(R.id.someText);
+        textView = v.findViewById(R.id.watch_someText);
+        TextWatcher textWatch = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                textView.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (s.length() == 0) {
+                    textView.setVisibility(View.GONE);
+                } else {
+                    textView.setText(editText.getText());
+                }
+            }
+        };
+
         textView.setVisibility(View.GONE);
         editText.addTextChangedListener(textWatch);
-
         return v;
     }
-
-    private TextWatcher textWatch = new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-            textView.setVisibility(View.VISIBLE);
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-            if (s.length()==0){
-                textView.setVisibility(View.GONE);
-            } else {
-                textView.setText(editText.getText());
-            }
-        }
-    };
 
 
 }
