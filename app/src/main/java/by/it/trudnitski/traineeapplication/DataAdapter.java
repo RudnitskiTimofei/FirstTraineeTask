@@ -16,7 +16,7 @@ import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     private List<Phone> phones;
-    String[] names = {
+    private String[] names = {
             "1 (first)", "2 (second)", "3 (third)", "4 (fourth)", "5 (five)",
             "6 (six)", "7 (seven)", "8 (eight)", "9 (nine)", "10 (ten)"};
 
@@ -69,12 +69,12 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     }
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         CardView cardView;
         ImageView imageView;
         TextView nameView;
 
-        public ViewHolder(View view) {
+        ViewHolder(View view) {
             super(view);
             cardView = view.findViewById(R.id.card_view);
             imageView = view.findViewById(R.id.image);

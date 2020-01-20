@@ -22,8 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/activity_margin_top"
-            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/activity_margin_top_10"
+            android:textSize="@dimen/text_size_50"
             android:text="@string/hello"
             android:textColor="@color/colorAccent" />
 
@@ -32,8 +32,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/text_size"
-            android:layout_marginTop="@dimen/activity_margin_top"
+            android:textSize="@dimen/text_size_50"
+            android:layout_marginTop="@dimen/activity_margin_top_10"
             android:text="@string/andersen"
             android:textColor="@color/black" />
 
@@ -42,7 +42,7 @@
                 android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_margin_top"
+                android:layout_marginTop="@dimen/activity_margin_top_20"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/button1" />
 

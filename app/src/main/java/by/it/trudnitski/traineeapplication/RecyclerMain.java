@@ -19,11 +19,12 @@ public class RecyclerMain extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycler_main);
+        intializeData();
+
         recyclerView = findViewById(R.id.list);
         adapter = new DataAdapter(phones);
         LinearLayoutManager manager = new LinearLayoutManager(this);
 
-        intializeData();
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(adapter);
     }
