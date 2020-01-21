@@ -27,7 +27,5 @@
             android:layout_toEndOf="@+id/image"
             android:textColor="@color/watcher"
             android:textSize="@dimen/text_size_30" />
-
     </RelativeLayout>
-
 </androidx.cardview.widget.CardView>

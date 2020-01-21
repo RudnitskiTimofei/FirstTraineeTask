@@ -14,7 +14,6 @@ public class FragmentView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_view);
-
         final EditText editText = findViewById(R.id.someText);
         Button buttonShowToast = findViewById(R.id.show_toast);
 

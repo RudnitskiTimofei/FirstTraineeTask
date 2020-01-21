@@ -14,6 +14,5 @@
         android:onClick="onClickToChoose"
         android:background="@drawable/screen"
         >
-
     </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

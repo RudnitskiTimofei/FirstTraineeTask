@@ -36,23 +36,20 @@
             android:layout_marginTop="@dimen/activity_margin_top_10"
             android:text="@string/andersen"
             android:textColor="@color/black" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_top_20"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/button1" />
 
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_margin_top_20"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/button1" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/button3" />
-
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/button3" />
 
         <FrameLayout
             android:id="@+id/content_frame"
@@ -60,7 +57,6 @@
             android:layout_height="match_parent" />
 
     </LinearLayout>
-
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"

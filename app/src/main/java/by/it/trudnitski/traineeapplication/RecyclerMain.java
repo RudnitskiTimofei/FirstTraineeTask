@@ -14,6 +14,7 @@ public class RecyclerMain extends AppCompatActivity {
     private RecyclerView recyclerView;
     DataAdapter adapter;
     private List<Phone> phones;
+    LinearLayoutManager manager;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class RecyclerMain extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.list);
         adapter = new DataAdapter(phones);
-        LinearLayoutManager manager = new LinearLayoutManager(this);
+        manager = new LinearLayoutManager(this);
 
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(adapter);

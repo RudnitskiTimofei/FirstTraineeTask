@@ -34,11 +34,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     }
 
     @Override
-    public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
-        super.onAttachedToRecyclerView(recyclerView);
-    }
-
-    @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.imageView.setImageResource(phones.get(position).getImage());
         holder.nameView.setText(phones.get(position).getName());
@@ -61,6 +56,11 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
                 alert.show();
             }
         });
+    }
+
+    @Override
+    public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
     }
 
     @Override
